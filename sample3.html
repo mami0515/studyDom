@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+</head>
+<body>
+<div id="container">aaaa</div>
+<div id="container2">bbbbb</div>
+
+<input type="text" id="input">
+
+<script type="text/javascript">
+document.getElementById('container').onclick = function(e){
+  console.log('くりっくされたよ');
+}
+document.getElementById('container').onclick = function(e){
+  console.log('くりっくされたよ22');
+}
+
+document.getElementById('container2').addEventListener('click', function(e){
+  console.log('いべんとはんどらー');
+  document.getElementById('input').removeEventListener('keydown', onKeydown);
+});
+document.getElementById('container2').addEventListener('click', function(e){
+  console.log('いべんとはんどらー2222');
+});
+
+document.getElementById('input').addEventListener('keydown', onKeydown);
+function onKeydown(e){
+  console.log(e);
+}
+
+window.addEventListener('resize', function(e){
+  console.log('ウィンドウの幅が変わりました！');
+});
+
+</script>
+</body>
+</html>

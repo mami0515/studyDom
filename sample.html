@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+</head>
+<body>
+
+<div id="wrapper">
+  
+<div id="container">aaaaaaa</div>
+<input type="text" name="" value="" id="input01">
+
+<div class="box">box</div>
+<div class="box">box</div>
+<div class="box">box</div>
+<div class="box">box</div>
+<div class="box">box</div>
+
+</div>
+
+<script type="text/javascript" src="https://s.yimg.jp/l/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript">
+document.getElementById("container").style.background = "red";
+//document.getElementById("container").className = "box";
+document.getElementById("input01").name = "name";
+document.getElementById("input01").value = "sample text";
+
+var boxes = document.getElementById("wrapper").getElementsByClassName("box");
+console.log(boxes);
+boxes[2].style.background = "green";
+
+var divs = document.getElementsByTagName("div");
+console.log(divs);
+
+var i;
+for (i = 0; i < divs.length; i++) {
+  divs[i].style.border = "1px solid #000";
+}
+
+document.getElementById("container").innerHTML = "bbbbb";
+
+var p = document.createElement("p");
+p.className = "text";
+p.innerHTML = "ppppppp";
+document.getElementById("container").appendChild(p);
+//document.getElementById("container").removeChild(p);
+
+var img = document.createElement("img");
+img.src = "http://mym.corp.yahoo.co.jp/api/users/maoda/icon/s212/maoda";
+document.getElementById("container").insertBefore(img, p);
+
+console.log(img.nextSibling);
+console.log(img.parentNode);
+console.log(document.getElementById("container").childNodes);
+console.log(document.getElementById("container").firstChild);
+console.log(document.getElementById("container").lastChild);
+
+
+
+//$("#container").css("background", "red");
+</script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+</head>
+<body>
+
+<div id="wrapper">
+  
+<div id="container">aaaaaaa</div>
+<div id="txt"><input type="text" name="" value="" id="input01"></div>
+
+<div class="box">box</div>
+<div class="box">box</div>
+<div class="box">box</div>
+<div class="box">box</div>
+<div class="box">box</div>
+<div class="box">box</div>
+<div class="box">box</div>
+
+<div id="box2">
+<p>box2</p>
+<p>box2</p>
+<p>box2</p>
+<p>box2</p>
+<p>box2</p>
+</div>
+
+</div>
+
+<script type="text/javascript" src="https://s.yimg.jp/l/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript">
+var container = document.getElementById("container"),
+    txt = document.getElementById("txt"),
+    input01 = document.getElementById("input01"),
+    box2 = 
+    boxes = document.getElementById("wrapper").getElementsByClassName("box"),
+    ps = document.getElementById("box2").getElementsByTagName("p"),
+    p = document.createElement("p"),
+    div = document.createElement("div"),
+    img = document.createElement("img");
+
+container.style.background = "pink";
+container.style.border = "5px dotted black";
+container.innerHTML = "abababababab"
+txt.style.margin = "10px 0";
+input01.value = "bbbbbbb";
+input01.style.fontSize = "1.5em";
+input01.name = "name";
+boxes[0].style.background = "pink";
+boxes[1].style.background = "red";
+boxes[2].style.background = "orange";
+boxes[3].style.background = "yellow";
+boxes[4].style.background = "green";
+boxes[5].style.background = "blue";
+boxes[6].style.background = "purple";
+for(var i = 0; i < ps.length; i++){
+  ps[i].style.border = "1px solid gray";
+  ps[i].style.margin = "0";
+}
+ps[0].style.marginTop = "10px";
+p.className = "text";
+p.innerHTML = "pppppppp";
+container.appendChild(p);
+div.className = "note";
+div.innerHTML = "めも！";
+container.appendChild(div);
+//container.removeChild(p);
+img.src = "http://mym.corp.yahoo.co.jp/api/users/maoda/icon/s212/maoda";
+container.insertBefore(img, p);
+console.log(img.nextSibling);
+console.log(img.parentNode);
+console.log(container.childNodes);
+console.log(container.firstChild);
+console.log(container.lastChild);
+</script>
+</body>
+</html>

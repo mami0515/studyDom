@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+</head>
+<body>
+<div id="container">aaaa</div>
+
+<input type="text" id="input">
+
+<script type="text/javascript">
+document.getElementById('container').addEventListener('click', function(e){
+  var evt = document.createEvent('UIEvents');
+  evt.initEvent('maoda', false, true);
+  document.dispatchEvent(evt);
+});
+document.addEventListener('maoda', function(e){
+  document.getElementById('input').value = 'aaa';
+});
+</script>
+</body>
+</html>
